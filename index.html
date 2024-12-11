@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Creatiwise test</title>
+  <link rel="stylesheet" href="css/tailwind.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <div id="header"></div>
+  <div id="hero"></div>
+  <div id="features"></div>
+  <div id="footer"></div>
+
+  <script src="js/mobile-menu.js"></script>
+  <!-- Header -->
+  <script>
+    fetch('./components/header.html')
+      .then(response => response.text())
+      .then(html =>
+      {
+        document.getElementById('header').innerHTML = html;
+      })
+      .catch(error => console.error('Error loading the HTML file:', error));
+  </script>
+  <!-- Hero -->
+  <script>
+    fetch('./components/hero.html')
+      .then(response => response.text())
+      .then(html =>
+      {
+        document.getElementById('hero').innerHTML = html;
+      })
+      .catch(error => console.error('Error loading the HTML file:', error));
+  </script>
+  <!-- Features -->
+  <script>
+    fetch('./components/features.html')
+      .then(response => response.text())
+      .then(html =>
+      {
+        document.getElementById('features').innerHTML = html;
+      })
+      .catch(error => console.error('Error loading the HTML file:', error));
+  </script>
+  <!-- Footer -->
+  <script>
+    fetch('./components/footer.html')
+      .then(response => response.text())
+      .then(html =>
+      {
+        document.getElementById('footer').innerHTML = html;
+      })
+      .catch(error => console.error('Error loading the HTML file:', error));
+  </script>
+</body>
+
+</html>
